@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02FFC5E0ADD92B01F48A4903 /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47644E6BD72074CFA186C07B /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework */; };
 		76E25A9B215EACCA00E130B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E25A9A215EACCA00E130B3 /* AppDelegate.swift */; };
 		76E25A9D215EACCA00E130B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E25A9C215EACCA00E130B3 /* ViewController.swift */; };
 		76E25AA0215EACCA00E130B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E25A9E215EACCA00E130B3 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47644E6BD72074CFA186C07B /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlurryCoreAnalyticsSampleApp_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E25A97215EACCA00E130B3 /* FlurryCoreAnalyticsSampleApp_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlurryCoreAnalyticsSampleApp_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E25A9A215EACCA00E130B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76E25A9C215EACCA00E130B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		76E25AA1215EACCB00E130B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76E25AA4215EACCB00E130B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76E25AA6215EACCB00E130B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC677087B650B4349859C38E /* Pods-FlurryCoreAnalyticsSampleApp_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlurryCoreAnalyticsSampleApp_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		EDCBCAA1D12501CFEFCDE0E3 /* Pods-FlurryCoreAnalyticsSampleApp_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlurryCoreAnalyticsSampleApp_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FFC5E0ADD92B01F48A4903 /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56F69C372F4194EC8E8C29A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDCBCAA1D12501CFEFCDE0E3 /* Pods-FlurryCoreAnalyticsSampleApp_Swift.debug.xcconfig */,
+				EC677087B650B4349859C38E /* Pods-FlurryCoreAnalyticsSampleApp_Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		76E25A8E215EACCA00E130B3 = {
 			isa = PBXGroup;
 			children = (
 				76E25A99215EACCA00E130B3 /* FlurryCoreAnalyticsSampleApp_Swift */,
 				76E25A98215EACCA00E130B3 /* Products */,
+				56F69C372F4194EC8E8C29A3 /* Pods */,
+				A547EF8994FEFEB3E9CE0390 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = FlurryCoreAnalyticsSampleApp_Swift;
 			sourceTree = "<group>";
 		};
+		A547EF8994FEFEB3E9CE0390 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				47644E6BD72074CFA186C07B /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76E25AA9215EACCB00E130B3 /* Build configuration list for PBXNativeTarget "FlurryCoreAnalyticsSampleApp_Swift" */;
 			buildPhases = (
+				4B1997EBA5A89ACEC5E7DD20 /* [CP] Check Pods Manifest.lock */,
 				76E25A93215EACCA00E130B3 /* Sources */,
 				76E25A94215EACCA00E130B3 /* Frameworks */,
 				76E25A95215EACCA00E130B3 /* Resources */,
+				457FF4756D7895FF4B86501A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		457FF4756D7895FF4B86501A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B1997EBA5A89ACEC5E7DD20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlurryCoreAnalyticsSampleApp_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		76E25A93215EACCA00E130B3 /* Sources */ = {
@@ -278,11 +343,13 @@
 		};
 		76E25AAA215EACCB00E130B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCBCAA1D12501CFEFCDE0E3 /* Pods-FlurryCoreAnalyticsSampleApp_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6JSG6FHB3;
 				INFOPLIST_FILE = FlurryCoreAnalyticsSampleApp_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +363,13 @@
 		};
 		76E25AAB215EACCB00E130B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC677087B650B4349859C38E /* Pods-FlurryCoreAnalyticsSampleApp_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6JSG6FHB3;
 				INFOPLIST_FILE = FlurryCoreAnalyticsSampleApp_Swift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
