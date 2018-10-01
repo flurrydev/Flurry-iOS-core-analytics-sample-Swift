@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		02FFC5E0ADD92B01F48A4903 /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47644E6BD72074CFA186C07B /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework */; };
+		7602E30F216289500094FF20 /* SessionOriginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7602E30E216289500094FF20 /* SessionOriginTableViewController.swift */; };
+		7602E3112162896C0094FF20 /* LogErrorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7602E3102162896C0094FF20 /* LogErrorTableViewController.swift */; };
+		7602E313216289820094FF20 /* LogEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7602E312216289820094FF20 /* LogEventTableViewController.swift */; };
+		7602E315216289A30094FF20 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7602E314216289A30094FF20 /* SettingViewController.swift */; };
+		7602E317216289C50094FF20 /* InfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7602E316216289C50094FF20 /* InfoTableViewController.swift */; };
+		767BEB32215ECA7D001A8E75 /* FlurryCoreConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 767BEB31215ECA7D001A8E75 /* FlurryCoreConfig.plist */; };
+		767BEB34215ECAE9001A8E75 /* FlurryCoreConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEB33215ECAE9001A8E75 /* FlurryCoreConfiguration.swift */; };
 		76E25A9B215EACCA00E130B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E25A9A215EACCA00E130B3 /* AppDelegate.swift */; };
 		76E25A9D215EACCA00E130B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E25A9C215EACCA00E130B3 /* ViewController.swift */; };
 		76E25AA0215EACCA00E130B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E25A9E215EACCA00E130B3 /* Main.storyboard */; };
@@ -17,6 +24,13 @@
 
 /* Begin PBXFileReference section */
 		47644E6BD72074CFA186C07B /* Pods_FlurryCoreAnalyticsSampleApp_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlurryCoreAnalyticsSampleApp_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7602E30E216289500094FF20 /* SessionOriginTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionOriginTableViewController.swift; sourceTree = "<group>"; };
+		7602E3102162896C0094FF20 /* LogErrorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogErrorTableViewController.swift; sourceTree = "<group>"; };
+		7602E312216289820094FF20 /* LogEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEventTableViewController.swift; sourceTree = "<group>"; };
+		7602E314216289A30094FF20 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		7602E316216289C50094FF20 /* InfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewController.swift; sourceTree = "<group>"; };
+		767BEB31215ECA7D001A8E75 /* FlurryCoreConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FlurryCoreConfig.plist; sourceTree = "<group>"; };
+		767BEB33215ECAE9001A8E75 /* FlurryCoreConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlurryCoreConfiguration.swift; sourceTree = "<group>"; };
 		76E25A97215EACCA00E130B3 /* FlurryCoreAnalyticsSampleApp_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlurryCoreAnalyticsSampleApp_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E25A9A215EACCA00E130B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76E25A9C215EACCA00E130B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +87,13 @@
 				76E25A9A215EACCA00E130B3 /* AppDelegate.swift */,
 				76E25A9C215EACCA00E130B3 /* ViewController.swift */,
 				76E25A9E215EACCA00E130B3 /* Main.storyboard */,
+				767BEB31215ECA7D001A8E75 /* FlurryCoreConfig.plist */,
+				767BEB33215ECAE9001A8E75 /* FlurryCoreConfiguration.swift */,
+				7602E30E216289500094FF20 /* SessionOriginTableViewController.swift */,
+				7602E3102162896C0094FF20 /* LogErrorTableViewController.swift */,
+				7602E312216289820094FF20 /* LogEventTableViewController.swift */,
+				7602E314216289A30094FF20 /* SettingViewController.swift */,
+				7602E316216289C50094FF20 /* InfoTableViewController.swift */,
 				76E25AA1215EACCB00E130B3 /* Assets.xcassets */,
 				76E25AA3215EACCB00E130B3 /* LaunchScreen.storyboard */,
 				76E25AA6215EACCB00E130B3 /* Info.plist */,
@@ -151,6 +172,7 @@
 				76E25AA5215EACCB00E130B3 /* LaunchScreen.storyboard in Resources */,
 				76E25AA2215EACCB00E130B3 /* Assets.xcassets in Resources */,
 				76E25AA0215EACCA00E130B3 /* Main.storyboard in Resources */,
+				767BEB32215ECA7D001A8E75 /* FlurryCoreConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +222,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7602E30F216289500094FF20 /* SessionOriginTableViewController.swift in Sources */,
+				7602E313216289820094FF20 /* LogEventTableViewController.swift in Sources */,
+				7602E3112162896C0094FF20 /* LogErrorTableViewController.swift in Sources */,
+				7602E317216289C50094FF20 /* InfoTableViewController.swift in Sources */,
 				76E25A9D215EACCA00E130B3 /* ViewController.swift in Sources */,
+				767BEB34215ECAE9001A8E75 /* FlurryCoreConfiguration.swift in Sources */,
+				7602E315216289A30094FF20 /* SettingViewController.swift in Sources */,
 				76E25A9B215EACCA00E130B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
