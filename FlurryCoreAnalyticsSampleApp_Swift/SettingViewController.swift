@@ -93,6 +93,10 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
     }
     
     @IBAction func start(_ sender: Any) {
+        // Required attributes when start session: apiKey, appVersion, sessionSeconds, enableCrashReport
+        // Option attributes when start session: age, gender, userid
+        
+        // if required attributes are not empty, set new value into the plist
         if !isTextFieldEmpty(fieldName: appVersionTextField) {
             config.setValue(filePath: path, key: "appVersion", data: appVersionTextField.text as AnyObject)
         }
@@ -105,6 +109,8 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
         }
         config.setValue(filePath: path, key: "enableCrashReport", data: enableCrashReportSwitch.isOn as AnyObject)
         
+        
+        // set new value to optional attributes (ok if it is empty)
         if !isTextFieldEmpty(fieldName: ageTextField) {
             config.setValue(filePath: path, key: "age", data: ageTextField.text as AnyObject)
             let age = Int(ageTextField.text!)
@@ -127,6 +133,9 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
             config.removeKey(filePath: path, key: "userId")
         }
         
+        
+        // If one of the required attributes is empty, prompt an alert. If not, start session
+        // The alert will ask user if they want to start session with one of the required field empty. If yes, we will use the defualt value instead.
         if (isTextFieldEmpty(fieldName: apiKeyTextField)) || (isTextFieldEmpty(fieldName: appVersionTextField)) || (isTextFieldEmpty(fieldName: sessionSecondsTextField)) {
             
             let alertController = UIAlertController(title: "Message", message: "Some non-optional text field is still empty. We will use the default value if you want to start session anyway..", preferredStyle: .alert)
@@ -136,8 +145,8 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
             }
             
             let start = UIAlertAction(title: "Start", style: .default) { (action:UIAlertAction) in
-                print("You've pressed start");
-                // set default value
+                print("user press start");
+                // set default value if users still leave some of the requirecd fields empty
                 if self.isTextFieldEmpty(fieldName: self.apiKeyTextField) {
                     self.config.setValue(filePath: self.path, key: "apiKey", data: self.config.getDefaultValue(key: "apiKey") as AnyObject)
                     self.apiKeyTextField.text = self.config.getDefaultValue(key: "apiKey") as? String
@@ -163,6 +172,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
         }
     }
     
+    // start flurry session
     func startFlurrySession() ->(Void){
         let version = config.getValue(key: "appVersion") as! String
         print (version)

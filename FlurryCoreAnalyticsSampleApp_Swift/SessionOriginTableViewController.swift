@@ -12,8 +12,8 @@ import Flurry_iOS_SDK
 
 class SessionOriginTableViewController: UITableViewController {
     
-    let sSessionOriginName = "facebuk";
-    let sSessionOriginWithDeeplinkName = "facebuk with a link";
+    let sSessionOriginName = "facebook";
+    let sSessionOriginWithDeeplinkName = "facebook with a link";
     let sOriginName = "Interesting Wrapper";
     let sDeeplink = "Flurry://app/analytics";
     let sOriginVersion = "1.0.0";

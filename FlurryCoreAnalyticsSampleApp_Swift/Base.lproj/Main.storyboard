@@ -33,7 +33,7 @@
         <!--Setting-->
         <scene sceneID="F0J-nx-HSl">
             <objects>
-                <viewController title="Setting" id="NdA-WE-egQ" customClass="SettingViewController" customModule="FlurryCoreAnalyticsSample_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Setting" id="NdA-WE-egQ" customClass="SettingViewController" customModule="FlurryCoreAnalyticsSampleApp_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uVb-wF-PK1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,7 +239,7 @@
         <!--LogError-->
         <scene sceneID="Rsm-gy-hAx">
             <objects>
-                <tableViewController id="uRd-Kd-RCV" userLabel="LogError" customClass="LogErrorTableViewController" customModule="FlurryCoreAnalyticsSample_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="uRd-Kd-RCV" userLabel="LogError" customClass="LogErrorTableViewController" customModule="FlurryCoreAnalyticsSampleApp_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qv6-QN-ZWl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -361,12 +361,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yqg-u9-Od5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3252" y="-670"/>
+            <point key="canvasLocation" x="3087" y="-730"/>
         </scene>
         <!--Info-->
         <scene sceneID="csa-Xd-olh">
             <objects>
-                <tableViewController title="Info" id="XIb-oL-3ew" customClass="InfoTableViewController" customModule="FlurryCoreAnalyticsSample_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Info" id="XIb-oL-3ew" customClass="InfoTableViewController" customModule="FlurryCoreAnalyticsSampleApp_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PJF-NO-H6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,21 +381,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-94-0SV">
-                                                    <rect key="frame" x="16" y="0.0" width="143" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-94-0SV">
+                                                    <rect key="frame" x="16" y="0.0" width="122" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="U6U-WH-j1n"/>
+                                                        <constraint firstAttribute="height" constant="44" id="klf-pt-ood"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="req-Ym-Is3">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="req-Ym-Is3">
                                                     <rect key="frame" x="262" y="7" width="97" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="n7V-w4-09Z"/>
+                                                        <constraint firstAttribute="width" constant="97" id="sRn-Nh-wd6"/>
+                                                    </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="req-Ym-Is3" secondAttribute="trailing" constant="16" id="0I9-5K-FXA"/>
+                                                <constraint firstAttribute="bottom" secondItem="5gi-94-0SV" secondAttribute="bottom" id="1D4-fl-uWY"/>
+                                                <constraint firstItem="req-Ym-Is3" firstAttribute="top" secondItem="K4j-yi-hK5" secondAttribute="top" constant="7" id="C8t-fR-vc3"/>
+                                                <constraint firstAttribute="bottom" secondItem="req-Ym-Is3" secondAttribute="bottom" constant="7" id="CLC-da-Nxz"/>
+                                                <constraint firstItem="5gi-94-0SV" firstAttribute="top" secondItem="K4j-yi-hK5" secondAttribute="top" id="Gh5-aG-h4N"/>
+                                                <constraint firstItem="5gi-94-0SV" firstAttribute="leading" secondItem="K4j-yi-hK5" secondAttribute="leading" constant="16" id="U9k-SO-v2g"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5gi-94-0SV" secondAttribute="trailing" constant="20" symbolic="YES" id="unK-m6-Cl4"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ePS-Sk-VeO">
@@ -405,21 +420,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYd-nP-CyK">
-                                                    <rect key="frame" x="16" y="-1" width="143" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYd-nP-CyK">
+                                                    <rect key="frame" x="16" y="0.0" width="140" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="IOv-aA-EXk"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="t8b-7Q-tbD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F2-oZ-ckX">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9F2-oZ-ckX">
                                                     <rect key="frame" x="262" y="6" width="97" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Djo-DY-CJ2"/>
+                                                        <constraint firstAttribute="width" constant="97" id="eMH-gN-bgG"/>
+                                                    </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="mYd-nP-CyK" secondAttribute="bottom" constant="-0.5" id="6fv-S7-4Fv"/>
+                                                <constraint firstAttribute="bottom" secondItem="9F2-oZ-ckX" secondAttribute="bottom" constant="7.5" id="UXy-RA-9nM"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mYd-nP-CyK" secondAttribute="trailing" constant="20" symbolic="YES" id="a4i-Jw-fjC"/>
+                                                <constraint firstItem="mYd-nP-CyK" firstAttribute="top" secondItem="EbZ-Uu-AxI" secondAttribute="top" id="ioe-FN-rMv"/>
+                                                <constraint firstItem="mYd-nP-CyK" firstAttribute="leading" secondItem="EbZ-Uu-AxI" secondAttribute="leading" constant="16" id="oKl-2I-ChR"/>
+                                                <constraint firstItem="9F2-oZ-ckX" firstAttribute="top" secondItem="EbZ-Uu-AxI" secondAttribute="top" constant="6" id="oYP-Pp-rnZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="9F2-oZ-ckX" secondAttribute="trailing" constant="16" id="vGX-Rp-sM8"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="P4w-em-oko">
@@ -429,21 +459,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68J-S4-ZND">
-                                                    <rect key="frame" x="16" y="-1" width="143" height="44"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserId" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68J-S4-ZND">
+                                                    <rect key="frame" x="16" y="0.0" width="143" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="143" id="AVq-zr-iAq"/>
+                                                        <constraint firstAttribute="height" constant="44" id="dF8-7L-JGJ"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-qT-BYr">
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLL-qT-BYr">
                                                     <rect key="frame" x="262" y="6" width="97" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="4CT-Sd-BEq"/>
+                                                        <constraint firstAttribute="width" constant="97" id="fKK-Sx-PAa"/>
+                                                    </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="68J-S4-ZND" firstAttribute="leading" secondItem="89d-py-JSa" secondAttribute="leading" constant="16" id="9Q3-Qs-4YT"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="68J-S4-ZND" secondAttribute="trailing" constant="20" symbolic="YES" id="APR-Rh-gYB"/>
+                                                <constraint firstItem="68J-S4-ZND" firstAttribute="top" secondItem="89d-py-JSa" secondAttribute="top" id="BBO-lC-BEd"/>
+                                                <constraint firstItem="HLL-qT-BYr" firstAttribute="top" secondItem="89d-py-JSa" secondAttribute="top" constant="6" id="DEC-FL-oYz"/>
+                                                <constraint firstAttribute="bottom" secondItem="HLL-qT-BYr" secondAttribute="bottom" constant="7.5" id="Y9e-ct-k1c"/>
+                                                <constraint firstAttribute="trailing" secondItem="HLL-qT-BYr" secondAttribute="trailing" constant="16" id="d2f-wh-3F3"/>
+                                                <constraint firstAttribute="bottom" secondItem="68J-S4-ZND" secondAttribute="bottom" constant="-0.5" id="sZe-7C-E6c"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -493,12 +538,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kmr-Jo-vwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549.5999999999999" y="653.52323838080963"/>
+            <point key="canvasLocation" x="1754" y="490"/>
         </scene>
         <!--Session-->
         <scene sceneID="Rmk-Jq-p3x">
             <objects>
-                <tableViewController id="oBI-Iu-sIO" userLabel="Session" customClass="SessionOriginTableViewController" customModule="FlurryCoreAnalyticsSample_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oBI-Iu-sIO" userLabel="Session" customClass="SessionOriginTableViewController" customModule="FlurryCoreAnalyticsSampleApp_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="BPS-I9-lu7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -607,12 +652,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oc6-6q-gCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2578" y="26"/>
+            <point key="canvasLocation" x="2530" y="-86"/>
         </scene>
         <!--LogEvent-->
         <scene sceneID="XYo-jO-Hg0">
             <objects>
-                <tableViewController id="jVH-z7-FWe" userLabel="LogEvent" customClass="LogEventTableViewController" customModule="FlurryCoreAnalyticsSample_Swift_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jVH-z7-FWe" userLabel="LogEvent" customClass="LogEventTableViewController" customModule="FlurryCoreAnalyticsSampleApp_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="wrD-vh-chw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

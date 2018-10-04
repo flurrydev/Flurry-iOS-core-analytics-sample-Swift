@@ -15,7 +15,6 @@ class LogEventTableViewController: UITableViewController {
     let sTimedLogEventName = "sample timed log event name"
     let sLogEventNameWithParams = "sample log event name with params"
     let sTimedLogEventNameWithParams = "sample timed log event name with params"
-    let sAlertDismissTime: Double = 0.35
     
     var isLoggingTimedEvent: Bool!
     var isLoggingTimedEventWithParams: Bool!
@@ -32,26 +31,17 @@ class LogEventTableViewController: UITableViewController {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
-    func displayAlertWithTitle(title: String, message: String?, dissmissAfter seconds: Double) -> Void {
+    // MARK: - helper function here
+    
+    // display alert
+    func displayAlertWithTitle(title: String, message: String?) -> Void {
         // set alert controller
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        
-        if seconds <= 0 {
-            let dismissAction = UIAlertAction(title: "Dismiss", style: .default)
-            
-            alertController.addAction(dismissAction)
-            alertController.dismiss(animated: true, completion: nil)
-        }
         self.present(alertController, animated: true, completion: {
-            if seconds > 0 {
-                let delay = DispatchTime.now() + seconds
-                DispatchQueue.main.asyncAfter(deadline: delay){
-                    alertController.dismiss(animated: true, completion: nil)
-                }
+            let delay = DispatchTime.now() + 0.5
+            DispatchQueue.main.asyncAfter(deadline: delay){
+                alertController.dismiss(animated: true, completion: nil)
             }
         })
         
@@ -107,15 +97,15 @@ class LogEventTableViewController: UITableViewController {
             if indexPath.row == 0 {
                 // normal event
                 let status: FlurryEventRecordStatus = Flurry.logEvent(sLogEventName)
-                displayAlertWithTitle(title: "Log Event", message: stringForEventRecordStatus(status: status), dissmissAfter: sAlertDismissTime)
+                displayAlertWithTitle(title: "Log Event", message: stringForEventRecordStatus(status: status))
             } else {
                 // timed event
                 if isLoggingTimedEvent {
                     Flurry.endTimedEvent(sTimedLogEventName, withParameters: nil)
-                    displayAlertWithTitle(title: "End timed event ", message: nil, dissmissAfter: sAlertDismissTime)
+                    displayAlertWithTitle(title: "End timed event ", message: nil)
                 } else {
                     let status: FlurryEventRecordStatus = Flurry.logEvent(sTimedLogEventName, timed: true)
-                    displayAlertWithTitle(title: "Begin timed event", message: stringForEventRecordStatus(status: status), dissmissAfter: sAlertDismissTime)
+                    displayAlertWithTitle(title: "Begin timed event", message: stringForEventRecordStatus(status: status))
                 }
                 isLoggingTimedEvent = !isLoggingTimedEvent
                 setEnabled(enabled: !isLoggingTimedEvent, params: false, forRowAtIndexPath: indexPath)
@@ -125,15 +115,15 @@ class LogEventTableViewController: UITableViewController {
             if indexPath.row == 0 {
                 // normal event with params
                 let status: FlurryEventRecordStatus = Flurry.logEvent(sLogEventNameWithParams, withParameters: defaultParams)
-                displayAlertWithTitle(title: "Log Event with Params", message: stringForEventRecordStatus(status: status), dissmissAfter: sAlertDismissTime)
+                displayAlertWithTitle(title: "Log Event with Params", message: stringForEventRecordStatus(status: status))
             } else {
                 // timed event with params
                 if isLoggingTimedEventWithParams {
                     Flurry.endTimedEvent(sTimedLogEventNameWithParams, withParameters: defaultParams)
-                    displayAlertWithTitle(title: "End timed event", message: nil, dissmissAfter: sAlertDismissTime)
+                    displayAlertWithTitle(title: "End timed event", message: nil)
                 } else {
                     let status: FlurryEventRecordStatus = Flurry.logEvent(sTimedLogEventNameWithParams, withParameters: defaultParams, timed: true)
-                    displayAlertWithTitle(title: "Begin timed event with params", message: stringForEventRecordStatus(status: status), dissmissAfter: sAlertDismissTime)
+                    displayAlertWithTitle(title: "Begin timed event with params", message: stringForEventRecordStatus(status: status))
                 }
                 isLoggingTimedEventWithParams = !isLoggingTimedEventWithParams
                 setEnabled(enabled: !isLoggingTimedEventWithParams, params: true, forRowAtIndexPath: indexPath)
@@ -142,8 +132,6 @@ class LogEventTableViewController: UITableViewController {
         default:
             break;
         }
-        
     }
-    
 }
 
