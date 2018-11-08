@@ -40,7 +40,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
         // Dispose of any resources that can be recreated.
     }
     
-    
+    // show the setting page
     func showDetail()->(Void) {
         config = FlurryCoreConfiguration.sharedInstance
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true) as NSArray
@@ -189,7 +189,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate, UIPickerView
         Flurry.startSession(apiKey, with: builder)
     }
     
-    // MARK: picker view delegate and data source
+    // MARK: - picker view delegate and data source
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
