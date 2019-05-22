@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   FlurryCoreConfig.plist
+   FlurryCoreAnalyticsSampleApp_Swift
+
+   Created by Yilun Xu on 9/28/18.
+   Copyright (c) 2018 Flurry. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>enableCrashReport</key>
+        <false/>
+        <key>apiKey</key>
+        <string>8C9CYVQZWXZSHQVTWBVV</string>
+        <key>sessionSeconds</key>
+        <integer>10</integer>
+        <key>appVersion</key>
+        <string>1.0</string>
+    </dict>
+</plist>
