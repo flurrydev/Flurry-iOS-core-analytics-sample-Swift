@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -143,6 +143,7 @@
 				TargetAttributes = {
 					76E25A96215EACCA00E130B3 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -184,17 +185,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4B1997EBA5A89ACEC5E7DD20 /* [CP] Check Pods Manifest.lock */ = {
@@ -384,7 +384,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flurry.FlurryCoreAnalyticsSampleApp-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -404,7 +404,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.flurry.FlurryCoreAnalyticsSampleApp-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
