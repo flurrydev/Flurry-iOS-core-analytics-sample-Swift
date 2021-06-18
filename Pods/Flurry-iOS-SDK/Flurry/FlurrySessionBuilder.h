@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FlurryConsent.h"
+#import "FlurryCCPA.h"
 
 
 /*!
@@ -23,7 +24,21 @@ typedef enum {
 } FlurryLogLevel;
 
 
+#if !TARGET_OS_WATCH
+
+
 @interface FlurrySessionBuilder : NSObject
+
+/*!
+*@brief An api to send ccpa compliance data to Flurry on the user's choice to opt out or opt in to data sale to third parties.
+*   @since 10.1.0
+*
+*
+* @param value  boolean true if the user wants to opt out of data sale, the default value is false
+*/
+
+- (FlurrySessionBuilder*) withDataSaleOptOut:(BOOL)value;
+
 
 /*!
  *  @brief Explicitly specifies the App Version that Flurry will use to group Analytics data.
@@ -115,7 +130,6 @@ typedef enum {
 - (FlurrySessionBuilder*) withConsent:(FlurryConsent*)consent;
 
 
-#if !TARGET_OS_WATCH
 /*!
  *  @brief Enables implicit recording of Apple Store transactions.
  *  @since 7.9.0
@@ -192,8 +206,6 @@ typedef enum {
 - (FlurrySessionBuilder*) withSessionProperties:(NSDictionary*) properties;
 
 
-#endif
-
 #if TARGET_OS_TV
 
 /*!
@@ -224,3 +236,5 @@ typedef enum {
 #endif
 
 @end
+
+#endif
