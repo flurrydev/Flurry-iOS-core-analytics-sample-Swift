@@ -60,24 +60,24 @@ class LogErrorTableViewController: UITableViewController {
         if indexPath.row == 0 {
             // log exception
             let exception = NSException.init(name: NSExceptionName.init(rawValue: sLogException), reason: "sample reason", userInfo: nil)
-            Flurry.logError(sLogException, message: "log with exception message", exception: exception)
+            Flurry.log(errorId: sLogException, message: "log with exception message", exception: exception)
             displayAlertWithTitle(title: "Log Exception", message: nil, dissmissAfter: sAlertDismissTime)
         } else if indexPath.row == 1 {
             // log error
             let error = NSError.init(domain: sFlurryAppDomain, code: 42, userInfo: nil)
-            Flurry.logError(sLogError, message: nil, error: error)
+            Flurry.log(errorId: sLogError, message: nil, error: error)
             displayAlertWithTitle(title: "Log Error", message: nil, dissmissAfter: sAlertDismissTime)
         } else if indexPath.row == 2 {
             // log error with tags
             let error = NSError.init(domain: sFlurryAppDomain, code: 42, userInfo: nil)
             let errorTags = ["location" : "not valid"]
-            Flurry.logError(sLogErrorWithTags, message: "log error with tags", error: error, withParameters: errorTags)
+            Flurry.log(errorId: sLogErrorWithTags, message: "log error with tags", error: error, parameters: errorTags)
             displayAlertWithTitle(title: "log error with tags", message: nil, dissmissAfter: sAlertDismissTime)
         } else if indexPath.row == 3 {
             // log exception with tags
             let exception = NSException.init(name: NSExceptionName(rawValue: sLogExceptionWithTags), reason: "sample reason", userInfo: nil)
             let exceptionTags = ["appVersion" : "3.2"]
-            Flurry.logError("log exception with tags", message: nil, exception: exception, withParameters: exceptionTags)
+            Flurry.log(errorId: "log exception with tags", message: nil, exception: exception, parameters: exceptionTags)
             
             displayAlertWithTitle(title: "Log exception with tags", message: nil, dissmissAfter: sAlertDismissTime)
         } else if indexPath.row == 4 {

@@ -1,11 +1,11 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/Flurry-iOS-SDK
-EXCLUDED_ARCHS[sdk=appletvsimulator*] = arm64
-EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
-EXCLUDED_ARCHS[sdk=watchsimulator*] = arm64
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Flurry-iOS-SDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/Flurry-iOS-SDK/CrashReporter"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Flurry-iOS-SDK/Flurry"
-OTHER_LDFLAGS = $(inherited) -l"Flurry_11.2.1" -framework "Foundation" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_XCFRAMEWORKS_BUILD_DIR}/Flurry-iOS-SDK/FlurrySDK/Headers"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_XCFRAMEWORKS_BUILD_DIR}/Flurry-iOS-SDK/FlurrySDK"
+ONLY_ACTIVE_ARCH = YES
+OTHER_LDFLAGS = $(inherited) -l"Flurry" -framework "Foundation" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}

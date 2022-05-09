@@ -11,6 +11,7 @@
 #endif
 
 #import "Flurry.h"
+#import "Flurry+Event.h"
 #import "FlurrySessionBuilder.h"
 #import "FlurryConsent.h"
 #import "FlurryUserProperties.h"

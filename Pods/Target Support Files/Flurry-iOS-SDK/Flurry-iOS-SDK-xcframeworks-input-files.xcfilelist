@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Flurry-iOS-SDK/Flurry-iOS-SDK-xcframeworks.sh
+${PODS_ROOT}/Flurry-iOS-SDK/CrashReporter.xcframework
+${PODS_ROOT}/Flurry-iOS-SDK/Flurry.xcframework

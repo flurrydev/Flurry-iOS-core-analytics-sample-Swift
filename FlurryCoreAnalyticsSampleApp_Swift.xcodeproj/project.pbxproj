@@ -120,7 +120,6 @@
 				76E25A93215EACCA00E130B3 /* Sources */,
 				76E25A94215EACCA00E130B3 /* Frameworks */,
 				76E25A95215EACCA00E130B3 /* Resources */,
-				457FF4756D7895FF4B86501A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,23 +179,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		457FF4756D7895FF4B86501A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlurryCoreAnalyticsSampleApp_Swift/Pods-FlurryCoreAnalyticsSampleApp_Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4B1997EBA5A89ACEC5E7DD20 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,7 +359,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6JSG6FHB3;
 				INFOPLIST_FILE = FlurryCoreAnalyticsSampleApp_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -397,7 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S6JSG6FHB3;
 				INFOPLIST_FILE = FlurryCoreAnalyticsSampleApp_Swift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

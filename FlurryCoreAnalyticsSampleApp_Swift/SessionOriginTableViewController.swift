@@ -60,11 +60,11 @@ class SessionOriginTableViewController: UITableViewController {
         case 0:
             if indexPath.row == 0 {
                 // add session origin
-                Flurry.addSessionOrigin(sSessionOriginName)
+                Flurry.add(sessionOriginName: sSessionOriginName)
                 displayAlertWithTitle(title: "session origin added", message: nil, dissmissAfter: sAlertDismissTime)
             } else if indexPath.row == 1 {
                 // add session origin with deeplink
-                Flurry.addSessionOrigin(sSessionOriginName, withDeepLink: sDeeplink)
+                Flurry.add(sessionOriginName: sSessionOriginName, deepLink: sDeeplink)
                 displayAlertWithTitle(title: "session origin with deeplink added", message: nil, dissmissAfter: sAlertDismissTime)
             } else {
                 // set session property
@@ -76,12 +76,12 @@ class SessionOriginTableViewController: UITableViewController {
         case 1:
             if indexPath.row == 0 {
                 //add origin with version
-                Flurry.addOrigin(sOriginName, withVersion: sOriginVersion)
+                Flurry.add(originName: sOriginName, originVersion: sOriginVersion)
                 displayAlertWithTitle(title: "origin with version added", message: nil, dissmissAfter: sAlertDismissTime)
             } else {
                 // add origin with params and version
                 let params = ["origin info key":"origin info value"]
-                Flurry.addOrigin(sOriginName, withVersion: sOriginVersion, withParameters: params)
+                Flurry.add(originName: sOriginName, originVersion: sOriginVersion, parameters: params)
                 displayAlertWithTitle(title: "origin with version and params added", message: nil, dissmissAfter: sAlertDismissTime)
             }
             break;

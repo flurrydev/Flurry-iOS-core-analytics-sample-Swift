@@ -1,0 +1,2 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Flurry-iOS-SDK/CrashReporter/CrashReporter.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Flurry-iOS-SDK/FlurrySDK/Flurry.framework

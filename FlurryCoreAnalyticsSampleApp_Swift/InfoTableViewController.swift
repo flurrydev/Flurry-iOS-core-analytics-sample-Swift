@@ -58,21 +58,21 @@ class InfoTableViewController: UITableViewController, UIPickerViewDelegate, UIPi
         if !isTextFieldEmpty(fieldName: ageTextField) {
             config.setValue(filePath: path, key: "age", data: ageTextField.text as AnyObject)
             let age = Int(ageTextField.text!)
-            Flurry.setAge(Int32(truncatingIfNeeded: age!))
+            Flurry.set(age: Int32(truncatingIfNeeded: age!))
         } else {
             config.removeKey(filePath: path, key: "age")
         }
         
         if !isTextFieldEmpty(fieldName: genderTextField) {
             config.setValue(filePath: path, key: "gender", data: genderTextField.text as AnyObject)
-            Flurry.setGender(genderTextField.text!)
+            Flurry.set(gender: genderTextField.text!)
         } else {
             config.removeKey(filePath: path, key: "gender")
         }
         
         if !isTextFieldEmpty(fieldName: userIdTextField) {
             config.setValue(filePath: path, key: "userId", data: userIdTextField.text as AnyObject)
-            Flurry.setUserID(userIdTextField.text)
+            Flurry.set(userId: userIdTextField.text)
         } else {
             config.removeKey(filePath: path, key: "userId")
         }
