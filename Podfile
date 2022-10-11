@@ -6,5 +6,5 @@ target 'FlurryCoreAnalyticsSampleApp_Swift' do
   use_frameworks!
 
   # Pods for FlurryCoreAnalyticsSampleApp_Swift
-  pod 'Flurry-iOS-SDK/FlurrySDK'
+pod 'Flurry-iOS-SDK/FlurrySDK'
 end

@@ -1,6 +1,6 @@
 PODS:
-  - Flurry-iOS-SDK/CrashReporter (12.0.0)
-  - Flurry-iOS-SDK/FlurrySDK (12.0.0):
+  - Flurry-iOS-SDK/CrashReporter (12.1.1)
+  - Flurry-iOS-SDK/FlurrySDK (12.1.1):
     - Flurry-iOS-SDK/CrashReporter
 
 DEPENDENCIES:
@@ -11,8 +11,8 @@ SPEC REPOS:
     - Flurry-iOS-SDK
 
 SPEC CHECKSUMS:
-  Flurry-iOS-SDK: 9fe953e13199a56c93d769d51abeb042fe45b02c
+  Flurry-iOS-SDK: 2ae2391515ae3248a63e95a397c1b393ae52b3a9
 
-PODFILE CHECKSUM: ac4ec8dc5c9bb588eb52a33ebd0338abfba7fe07
+PODFILE CHECKSUM: 3e4f482ab2b7fcd69e03b6d690715764813b9a67
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
